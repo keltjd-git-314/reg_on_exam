@@ -39,5 +39,6 @@
 📸 Скриншоты
 
 
-<img src="screen_main.png" width="600" alt="Описание скриншота">
-!screenshots/reg_panel.png
+![Главная страница](screen_main.png)
+![Админ-панель](screen_admin_panel.png)  
+![Форма регистрации](screen_reg_panel.png)
