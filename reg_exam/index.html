@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио студента</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Гуськов Данила Денисович</h1>
+    <h2>Информация о студенте:</h2>
+    <h3>Номер группы: 2014</h3>
+    <a href="https://uni-dubna.ru/directions/b048f7a1-318c-4c81-8747-6757a34527b1?profile=98254ecb-1ed0-4595-de6a-08db0aad1ba8"><h3> ИБТ</h3></a>
+    <a href="https://uni-dubna.ru/"><h3> ГУ "Дубна"</h3></a>
+
+    <form action="save_registration.php" method="post" name="Exam" onsubmit="return validateForm();">
+        <div class="form-container">
+            <div class="column left-column">
+                <div class="name-group">
+                    <legend>ФИО студента:</legend>
+                    <div class="name-row">
+                        <label>
+                            Фамилия:
+                            <input type="text" name="last_name" required placeholder="Иванов">
+                        </label>
+                        <label>
+                            Имя:
+                            <input type="text" name="first_name" required placeholder="Иван">
+                        </label>
+                        <label>
+                            Отчество:
+                            <input type="text" name="middle_name" placeholder="Иванович">
+                        </label>
+                    </div>
+                </div>
+
+                <legend>Курс:</legend>
+                <label>
+                    <input type="radio" name="course" value="1" checked>
+                    1
+                </label>
+                <label>
+                    <input type="radio" name="course" value="2">
+                    2
+                </label>
+
+                <legend>Факультет:</legend>
+                <label>
+                    <input type="radio" name="faculty" value="ИСАУ" checked>
+                    ИСАУ
+                </label>
+                <label>
+                    <input type="radio" name="faculty" value="ФСГН">
+                    ФСГН
+                </label>
+
+                <legend>Номер группы:</legend>
+                <label>
+                    <input type="radio" name="group" value="2013" checked>
+                    2013
+                </label>
+                <label>
+                    <input type="radio" name="group" value="2014">
+                    2014
+                </label>
+            </div>
+
+            <div class="column right-column">
+                <label>
+                    <legend>Предмет для сдачи:</legend>
+                    <select name="subject">
+                        <option value="Математика">Математика</option>
+                        <option value="Программирование">Программирование</option>
+                        <option value="Физика">Физика</option>
+                        <option value="Базы данных">Базы данных</option>
+                        <option value="Веб-разработка">Веб-разработка</option>
+                        <option value="Алгоритмы">Алгоритмы</option>
+                    </select>
+                </label>
+
+                <div class="name-group">
+                    <legend>ФИО преподавателя:</legend>
+                    <div class="name-row">
+                        <label>
+                            Фамилия:
+                            <input type="text" name="teacher_last_name" required placeholder="Петров">
+                        </label>
+                        <label>
+                            Имя:
+                            <input type="text" name="teacher_first_name" required placeholder="Петр">
+                        </label>
+                        <label>
+                            Отчество:
+                            <input type="text" name="teacher_middle_name" placeholder="Петрович">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="date-group">
+                    <label>
+                        <legend>День сдачи:</legend>
+                        <select name="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <legend>Месяц сдачи:</legend>
+                        <select name="month">
+                            <option value="Январь">Январь</option>
+                            <option value="Февраль">Февраль</option>
+                            <option value="Март">Март</option>
+                            <option value="Апрель">Апрель</option>
+                            <option value="Май">Май</option>
+                            <option value="Июнь">Июнь</option>
+                            <option value="Июль">Июль</option>
+                            <option value="Август">Август</option>
+                            <option value="Сентябрь">Сентябрь</option>
+                            <option value="Октябрь">Октябрь</option>
+                            <option value="Ноябрь">Ноябрь</option>
+                            <option value="Декабрь">Декабрь</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>
+                    <legend>Время сдачи:</legend>
+                    <input type="time" name="time" required>
+                </label>
+
+                <legend>Форма сдачи:</legend>
+                <label>
+                    <input type="radio" name="exam_type" value="Очная" checked>
+                    Очная
+                </label>
+                <label>
+                    <input type="radio" name="exam_type" value="Дистанционная">
+                    Дистанционная
+                </label>
+            </div>
+        </div>
+
+        <div class="form-buttons">
+            <input type="submit" value="Записаться" class="submit-btn">
+        </div>
+    </form>
+
+    <!-- Админ-панель -->
+    <div class="admin-link-container">
+        <a href="admin_panel.php" class="admin-link">Админ-панель (просмотр записей)</a>
+    </div>
+
+    <div class="image-container">
+        <img src="map_dubna.jpg" class="map-image" alt="Карта Дубны">
+        <img src="marker.png" class="marker" alt="Маркер расположения университета">
+        <a href="https://yandex.ru/maps/215/dubna/?ll=37.225480%2C56.740203&mode=poi&poi%5Bpoint%5D=37.225700%2C56.740055&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1095392570&z=18.49"
+           class="clickable-area"
+           title="Расположение университета на карте">
+        </a>
+    </div>
+
+    <script src="cheak_colum.js"></script>
+</body>
+</html>
